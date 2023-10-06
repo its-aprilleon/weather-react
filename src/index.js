@@ -12,6 +12,12 @@ root.render(
   <React.StrictMode>
     <div className="App">
       <Weather />
+      <p>
+        <a href="https://github.com/its-aprilleon/weather-react-app">
+          Open Source Code
+        </a>
+        By <a href="https://github.com/its-aprilleon">April</a>
+      </p>
     </div>
   </React.StrictMode>
 );
