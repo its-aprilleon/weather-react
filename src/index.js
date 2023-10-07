@@ -1,24 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 import reportWebVitals from "./reportWebVitals";
-import Weather from "./Weather";
-import "./Weather.css";
+
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="App">
-      <Weather />
-      <footer>
-        <a href="https://github.com/its-aprilleon/weather-react-app">
-          Open Source Code
-        </a>{" "}
-        By <a href="https://github.com/its-aprilleon">April</a>
-      </footer>
-    </div>
+    <App />
   </React.StrictMode>
 );
 
