@@ -1,16 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Weather.css";
+import axios from "axios";
 
 export default function Weather() {
-  return (
+  const [city, setCity] = useState(" ");
+  const [load, setLoad] = useState(false);
+  const [weather, setWeather] = useState({});
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    let city = "London";
+    let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=29baaftfaf333ad6ca3704ob80d346c8&units=metric`;
+
+    axios.get(apiurl).then(showWeather);
+  }
+
+  function changeCity(e) {
+    setCity(e.target.value);
+  }
+  function showWeather(response) {
+    setLoad(response.preventDefault());
+    setWeather = {
+      temp: response.data.temperature.current,
+      humidity: response.data.temperature.humidity,
+    };
+  }
+
+  let weatherTempelate = (
     <div className="Weather">
-      <form>
+      <form onClick={handleSubmit}>
         <div className="row">
           <div className="col-9">
             <input
               type="search"
               placeholder="Type a city..."
               className="form-control"
+              onChange={changeCity}
             />
           </div>
           <div className="col-3">
@@ -50,4 +75,10 @@ export default function Weather() {
       </div>
     </div>
   );
+
+  if (load) {
+    return <div>{weatherTempelate}</div>;
+  } else {
+    <div>{weatherTempelate}</div>;
+  }
 }
