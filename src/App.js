@@ -8,10 +8,16 @@ function App() {
         <Weather />
 
         <footer>
-          <a href="https://github.com/its-aprilleon/weather-react-app">
+          <a
+            href="https://github.com/its-aprilleon/weather-react-app"
+            target="_blank"
+          >
             Open Source Code
           </a>{" "}
-          By <a href="https://github.com/its-aprilleon">April</a>
+          By{" "}
+          <a href="https://github.com/its-aprilleon" target="_blank">
+            April
+          </a>
         </footer>
       </div>{" "}
     </div>
