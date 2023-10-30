@@ -11,11 +11,16 @@ function App() {
           <a
             href="https://github.com/its-aprilleon/weather-react-app"
             target="_blank"
+            rel="noreferrer"
           >
             Open Source Code
           </a>{" "}
           By{" "}
-          <a href="https://github.com/its-aprilleon" target="_blank">
+          <a
+            href="https://github.com/its-aprilleon"
+            target="_blank"
+            rel="noreferrer"
+          >
             April
           </a>
         </footer>
